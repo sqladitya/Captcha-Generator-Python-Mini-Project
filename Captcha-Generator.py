@@ -1,3 +1,4 @@
+# Code
 from tkinter import*
 import random
 from tkinter import messagebox
@@ -6,7 +7,7 @@ from tkinter import messagebox
 and to design the captcha'''
 code=" "
 def outline():
-  c.create_rectangle(80,10,240,70,fill='lightyellow')
+  c.create_rectangle(80,10,240,70,fill='lightblue')
   c.create_line(80,20,230,50)
   c.create_line(85,55,180,25)
   c.create_line(150,10,170,70)
@@ -61,7 +62,7 @@ def check():
     c.create_text(160,40,text=g,font='Calibri 28 bold')
     c.grid(row=3,column=10)
   else:
-    messagebox.showerror("ERROR","Wrong Captcha entered, Try again")
+    messagebox.showerror("ERROR","Wrong Captcha entered")
     g=generate()
     code=g
     outline()
@@ -79,25 +80,23 @@ root.geometry('450x290')
 root.title("Login")
 # designing the registration box
 code=generate()
-Reg_no=Label(root,text='Reg. Number: ',font='calibri 15 bold')
+Reg_no=Label(root,text='Registration Number: ',font='calibri 15 bold')
 Reg_no.grid(row=1,column=10,sticky=E)
 Regno_ent=Entry(root)
 Regno_ent.grid(row=1,column=11)
 # adding field for captcha writing.
-ent=Label(root,text='Enter the above Code: ',font='calibri 15 bold')
+ent=Label(root,text='Enter the Captcha: ',font='calibri 15 bold')
 ent.grid(row=4,column=10)
 ent_cap=Entry(root)
 ent_cap.grid(row=4,column=11)
 # adding buttons and images
-sub_btn=Button(root,text='Login',relief=RIDGE,height=2,width=10,bg='Black',fg='white',activebackground='blue',activeforeground='black',font='Times 10 bold',command=check)
+sub_btn=Button(root,text='Login',relief=RIDGE,height=2,width=10,bg='white',fg='black',activebackground='blue',activeforeground='black',font='Times 10 bold',command=check)
 #to set the co ordinates
 sub_btn.place(x=180, y=160)
 sub_btn.bind('<Enter>', on_enter)
 sub_btn.bind('<Leave>', on_leave)
-img=PhotoImage(file="Reload.png")
-signup_btn=Button(root,text='Signup',relief=RIDGE,height=2,width=10,bg='Black',fg='white',activebackground='blue',activeforeground='black',font='Times 10 bold')
-signup_btn.place(x=280, y=160)
-refresh=Button(root,text="Refresh",relief=RIDGE,height=30,width=40,bg='Black',image=img,activebackground='lightblue',command=refresh)
+img=PhotoImage(file="Refresh.png")
+refresh=Button(root,text="Refresh",relief=RIDGE,height=30,width=40,bg='white',image=img,activebackground='lightblue',command=refresh)
 refresh.grid(row=3,column=11)
 # adding canvas for captcha 
 c=Canvas(root,height=80,width=240)
@@ -105,5 +104,4 @@ outline()
 c.create_text(160,40,text=code,font='calibri 28 bold')
 c.grid(row=3,column=10)
 root.mainloop()
-
 # end
