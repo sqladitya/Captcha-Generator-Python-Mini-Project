@@ -95,7 +95,7 @@ sub_btn=Button(root,text='Login',relief=RIDGE,height=2,width=10,bg='white',fg='b
 sub_btn.place(x=180, y=160)
 sub_btn.bind('<Enter>', on_enter)
 sub_btn.bind('<Leave>', on_leave)
-img=PhotoImage(file="Refresh.png")
+img=PhotoImage(file="Reload.png")
 refresh=Button(root,text="Refresh",relief=RIDGE,height=30,width=40,bg='white',image=img,activebackground='lightblue',command=refresh)
 refresh.grid(row=3,column=11)
 # adding canvas for captcha 
