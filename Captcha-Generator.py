@@ -105,3 +105,5 @@ outline()
 c.create_text(160,40,text=code,font='calibri 28 bold')
 c.grid(row=3,column=10)
 root.mainloop()
+
+# end
