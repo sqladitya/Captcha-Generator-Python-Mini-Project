@@ -20,13 +20,6 @@ CONTENTS
 
 ### 5.	GUI Design 
 
-### 6.	Coding
-
-### 7.	Work done by each member
-
-### 8.	Result/Conclusion
-
-### 9.	References
 #
 ## FlowChart
 ![image](https://user-images.githubusercontent.com/84535788/202147963-2ecead00-40d0-4b33-af36-8cdf61928cee.png)
